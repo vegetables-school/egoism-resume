@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@types/node':
+    specifier: ^20.4.4
+    version: 20.4.4
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -45,7 +48,7 @@ devDependencies:
     version: 0.53.5(postcss@8.4.26)(vite@4.4.5)
   vite:
     specifier: ^4.4.5
-    version: 4.4.5
+    version: 4.4.5(@types/node@20.4.4)
 
 packages:
 
@@ -644,6 +647,9 @@ packages:
     resolution: {integrity: sha512-Hr5Jfhc9eYOQNPYO5WLDq/n4jqijdHNlDXjuAQkkt+mWdQR+XJToOHrsD4cPaMXpn6KO7y2+wM8AZEs8VpBLVA==}
     dev: true
 
+  /@types/node@20.4.4:
+    resolution: {integrity: sha512-CukZhumInROvLq3+b5gLev+vgpsIqC2D0deQr/yS1WnxvmYLlJXZpaQrQiseMY+6xusl79E04UjWoqyr+t1/Ew==}
+
   /@types/prop-types@15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
     dev: true
@@ -988,7 +994,7 @@ packages:
       chokidar: 3.5.3
       fast-glob: 3.3.0
       magic-string: 0.30.1
-      vite: 4.4.5
+      vite: 4.4.5(@types/node@20.4.4)
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -1003,7 +1009,7 @@ packages:
       '@babel/plugin-transform-react-jsx-self': 7.22.5(@babel/core@7.22.9)
       '@babel/plugin-transform-react-jsx-source': 7.22.5(@babel/core@7.22.9)
       react-refresh: 0.14.0
-      vite: 4.4.5
+      vite: 4.4.5(@types/node@20.4.4)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2206,7 +2212,7 @@ packages:
       punycode: 2.3.0
     dev: true
 
-  /vite@4.4.5:
+  /vite@4.4.5(@types/node@20.4.4):
     resolution: {integrity: sha512-4m5kEtAWHYr0O1Fu7rZp64CfO1PsRGZlD3TAB32UmQlpd7qg15VF7ROqGN5CyqN7HFuwr7ICNM2+fDWRqFEKaA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -2234,6 +2240,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': 20.4.4
       esbuild: 0.18.15
       postcss: 8.4.26
       rollup: 3.26.3
