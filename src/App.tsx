@@ -1,11 +1,4 @@
+import Resume from "@/pages/resume"
 
-function App() {
-
-  return (
-    <div>
-      Egoism Resume
-    </div>
-  )
-}
-
+const App = () => <Resume />
 export default App
