@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@types/node": "^20.4.4",
+    "@unocss/transformer-attributify-jsx": "0.53.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -19,6 +20,7 @@
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
+    "@unocss/eslint-config": "^0.53.6",
     "@vitejs/plugin-react": "^4.0.3",
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",

@@ -1,5 +1,6 @@
 // 还未处理
 import { defineConfig, presetAttributify, presetIcons, presetUno } from 'unocss'
+import transformerAttributifyJsx from '@unocss/transformer-attributify-jsx'
 
 export default defineConfig({
   theme: {
@@ -68,5 +69,8 @@ export default defineConfig({
         'height': '1.5em',
       },
     }),
+  ],
+  transformers: [
+    transformerAttributifyJsx(),
   ],
 })
