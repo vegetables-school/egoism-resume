@@ -3,7 +3,7 @@ import ResumePageHead from "@/page-components/ResumePageHead"
 const Educational = () => {
   return <div>
     <ResumePageHead/>
-    <div fbc>
+    <div un-fbc>
       <h4 m-0>浙江大学城市学院</h4>
       <div>2015 - 2019</div>
     </div>

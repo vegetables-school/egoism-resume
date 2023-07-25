@@ -21,13 +21,13 @@ export default defineConfig({
     ['fe', 'flex justify-end'],
     ['fec', 'flex justify-end items-center'],
     ['fb', 'flex justify-between'],
-    ['fbc', 'flex justify-between items-center'],
+    ['un-fbc', 'flex justify-between items-center'],
     ['fw', 'flex justify-wrap'],
     ['fwr', 'flex justify-wrap-reverse'],
     ['fa', 'flex justify-around'],
     ['fac', 'flex justify-around items-center'],
 
-    ['fic', 'flex items-center'],
+    ['un-fic', 'flex items-center'],
     ['fccc', 'flex justify-center items-center flex-col'],
 
     ['p-c', 'pa top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'],
@@ -59,7 +59,9 @@ export default defineConfig({
   ],
   presets: [
     presetUno(),
-    presetAttributify(),
+    presetAttributify({
+      prefix: 'uno-',
+    }),
     presetIcons({
       cdn: 'https://esm.sh/',
       extraProperties: {

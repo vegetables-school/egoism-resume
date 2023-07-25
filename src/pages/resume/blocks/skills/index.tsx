@@ -2,7 +2,7 @@ const Skills = () => {
   return <div>
     <hr />
       前端：
-      <ul m0>
+      <ul m-0>
         <li><div></div></li>
         <li>熟悉CSS，了解CSS处理器（Sass/Less）；</li>
         <li>熟悉主流框架Vue2/3及其部分原理，熟悉Vue周边生态，熟悉Vue-Router、Vuex、Pinia等技术栈的使用，能够使用Vue +
@@ -13,7 +13,7 @@ const Skills = () => {
         <li>了解Vite打包工具的基本配置及其部分原理，熟悉常用的Plugin配置，能够独立开发vite-plugin；</li>
       </ul>
       其他：
-      <ul m0>
+      <ul m-0>
         <li>了解Jest/Vitest，能够使用Vue Test Utils + Vitest编写组件单元测试；</li>
         <li>了解EggJs、NestJs，能够进行日常Nodejs服务端开发；</li>
         <li>了解Mongo、MySQL、Redis、Hive；</li>

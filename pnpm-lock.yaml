@@ -4,6 +4,9 @@ dependencies:
   '@types/node':
     specifier: ^20.4.4
     version: 20.4.4
+  '@unocss/preset-attributify':
+    specifier: ^0.53.6
+    version: registry.npmmirror.com/@unocss/preset-attributify@0.53.6
   '@unocss/transformer-attributify-jsx':
     specifier: 0.53.5
     version: registry.npmmirror.com/@unocss/transformer-attributify-jsx@0.53.5
@@ -687,12 +690,6 @@ packages:
       fast-glob: 3.3.0
       magic-string: 0.30.1
       postcss: registry.npmmirror.com/postcss@8.4.26
-    dev: true
-
-  /@unocss/preset-attributify@0.53.5:
-    resolution: {integrity: sha512-0TJD9hVUWu0T4dtdURApyFiliqbckYYGZe2PZBgUrHCypbI0zq7k3MdXFYmIuYxqDPErJVm8rO9lwMpKfTsvuA==}
-    dependencies:
-      '@unocss/core': registry.npmmirror.com/@unocss/core@0.53.5
     dev: true
 
   /@unocss/preset-icons@0.53.5:
@@ -1966,7 +1963,7 @@ packages:
       '@unocss/core': 0.53.5
       '@unocss/extractor-arbitrary-variants': 0.53.5
       '@unocss/postcss': 0.53.5(postcss@8.4.26)
-      '@unocss/preset-attributify': 0.53.5
+      '@unocss/preset-attributify': registry.npmmirror.com/@unocss/preset-attributify@0.53.5
       '@unocss/preset-icons': 0.53.5
       '@unocss/preset-mini': 0.53.5
       '@unocss/preset-tagify': 0.53.5
@@ -2479,7 +2476,6 @@ packages:
     resolution: {integrity: sha512-wuaLjWCzKUisHUxo4pjIdzcimdSmVa2hMHA3V7wVFBiSFX96/s7l0bvhHGFF/gMjbOnvJ+y+lBl3VKqcj9kwbA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@unocss/core/-/core-0.53.6.tgz}
     name: '@unocss/core'
     version: 0.53.6
-    dev: true
 
   registry.npmmirror.com/@unocss/eslint-config@0.53.6(eslint@8.45.0)(typescript@5.0.2):
     resolution: {integrity: sha512-shS4CV/TcyCqYsj/uk2uxohVNkm9qojuafej889KmiTySosIN+WDcyP0zhAX5vLHIeLbPJUbYCTrdu1TIXhsTA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@unocss/eslint-config/-/eslint-config-0.53.6.tgz}
@@ -2512,6 +2508,22 @@ packages:
       - supports-color
       - typescript
     dev: true
+
+  registry.npmmirror.com/@unocss/preset-attributify@0.53.5:
+    resolution: {integrity: sha512-0TJD9hVUWu0T4dtdURApyFiliqbckYYGZe2PZBgUrHCypbI0zq7k3MdXFYmIuYxqDPErJVm8rO9lwMpKfTsvuA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@unocss/preset-attributify/-/preset-attributify-0.53.5.tgz}
+    name: '@unocss/preset-attributify'
+    version: 0.53.5
+    dependencies:
+      '@unocss/core': registry.npmmirror.com/@unocss/core@0.53.5
+    dev: true
+
+  registry.npmmirror.com/@unocss/preset-attributify@0.53.6:
+    resolution: {integrity: sha512-mjYQTFMbT9d/bghxh+O02u06YiOxZUSI+XsepwRt28LUSRtM/MjQm1v/7uvCfyNgA3cfIFUB3MxkIprWIShDZQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@unocss/preset-attributify/-/preset-attributify-0.53.6.tgz}
+    name: '@unocss/preset-attributify'
+    version: 0.53.6
+    dependencies:
+      '@unocss/core': registry.npmmirror.com/@unocss/core@0.53.6
+    dev: false
 
   registry.npmmirror.com/@unocss/transformer-attributify-jsx@0.53.5:
     resolution: {integrity: sha512-ynAElIi9DxtHyKCW+OXPcLxje2ghVzKo80eaAVRAdVpyawsjtE4iHWjHRbESkiTsHW5CiJupdXo2vx1obXFLnQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@unocss/transformer-attributify-jsx/-/transformer-attributify-jsx-0.53.5.tgz}

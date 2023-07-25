@@ -1,7 +1,7 @@
 const Experiences = () => {
   return <div>
     <hr />
-    <div fbc>
+    <div un-fbc>
       <h4 m-0>青桔运营工作台 @滴滴出行</h4>
       <div>前后端开发</div>
       <div>2022年9月 -- 至今</div>
@@ -12,7 +12,7 @@ const Experiences = () => {
     <div>
       技术栈：Vue3全家桶 + qiankun + Antd-Vue + DEggJs + TS
     </div>
-    <ul m0>
+    <ul m-0>
       <li>参与使用 qiankun
         重构老平台，一方面团队能持续用新技术更新和重构，一方面保证团队随时可以接入新需求，实现项目增量更新；
       </li>
@@ -26,7 +26,7 @@ const Experiences = () => {
       </li>
     </ul>
 
-    <div fbc mt-4>
+    <div un-fbc mt-4>
       <h4 m-0>作业/人员/运维资产模块 @滴滴出行</h4>
       <div>前端开发</div>
       <div>2021年10月 -- 至今</div>
@@ -37,7 +37,7 @@ const Experiences = () => {
     <div>
       技术栈：Vue2 + Element + Serverless
     </div>
-    <ul m0>
+    <ul m-0>
       <li>为配合上述运营工作台微前端升级，整体页面升级为qingkun微应用加载，提升页面加载性能；</li>
       <li>参与业务组件库搭建（Element + Vue2 + Vite + Vitest +
         TS），产出组件mdx文档，遵循内部设计规范，统一工作台交互，落地页面开发使用；
@@ -48,7 +48,7 @@ const Experiences = () => {
       </li>
     </ul>
 
-    <div fbc mt-4>
+    <div un-fbc mt-4>
       <h4 m-0>全局配置平台 @滴滴出行</h4>
       <div>前端PM</div>
       <div>2022年3月 -- 2022年7月</div>
@@ -59,7 +59,7 @@ const Experiences = () => {
     <div>
       技术栈：React + Formily + Antd + TS
     </div>
-    <ul m0>
+    <ul m-0>
       <li>负责运营平台全局配置平台前端重构，采用Formily表单解决方案，搭建可视化表单搭建平台，同时推动在多个运营平台落地；</li>
       <li>该平台负责青桔单车/电单车业务中，以通用域方式支持服务端、运营侧快速配置，省去二次开发、发版等成本；</li>
       <li>
@@ -67,7 +67,7 @@ const Experiences = () => {
       </li>
     </ul>
 
-    <div fbc mt-4>
+    <div un-fbc mt-4>
       <h4 m-0>D-Design @滴滴出行</h4>
       <div>前端开发</div>
       <div>2022年3月 -- 2022年8月</div>
@@ -78,13 +78,13 @@ const Experiences = () => {
     <div>
       技术栈：React + Vue2 + Vue3
     </div>
-    <ul m0>
+    <ul m-0>
       <li>参与开发D-Design for Vue2、Vue3、React基础组件库开发</li>
       <li>参与开发material-cli脚手架，核心实现了物料创建、物料编译、物料发布npm以及同步至物料平台的功能；</li>
       <li>产出ListPage (列表页)、Detail (详情)、TabBar (带右键菜单tab栏)、404页、无权限页等覆盖中后台全链路的基础物料库；</li>
     </ul>
 
-    <div fbc mt-4>
+    <div un-fbc mt-4>
       <h4 m-0>色纺供应链系统ERP @天时时尚</h4>
       <div>前端开发</div>
       <div>2019年10月 -- 2021年5月</div>
@@ -95,7 +95,7 @@ const Experiences = () => {
     <div>
       技术栈：Vue2全家桶 + Element
     </div>
-    <ul m0>
+    <ul m-0>
       <li>负责开发色纺供应链项目中的仓储、产品资料、客户信息系统，使用Vue2 + Element + Vuex + Vue Router编写</li>
       <li>推动公司前端组件库(Vite + Vue3 + Jest)搭建、测试用例落地；</li>
     </ul>
