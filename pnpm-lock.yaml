@@ -13,6 +13,9 @@ dependencies:
   react-dom:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
+  shuimo-ui:
+    specifier: 0.3.0-alpha.6
+    version: registry.npmmirror.com/shuimo-ui@0.3.0-alpha.6
 
 devDependencies:
   '@types/react':
@@ -3094,6 +3097,12 @@ packages:
     version: 3.0.0
     engines: {node: '>=8'}
     dev: true
+
+  registry.npmmirror.com/shuimo-ui@0.3.0-alpha.6:
+    resolution: {integrity: sha512-pZ8LxGgsmoikHNtAOuYdRR8Kai3+pgBjSdzHamHZH83FIIWP+Q9ompZXIVU/1WkSzoehGDN+2lFmMy/L8EwukA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/shuimo-ui/-/shuimo-ui-0.3.0-alpha.6.tgz}
+    name: shuimo-ui
+    version: 0.3.0-alpha.6
+    dev: false
 
   registry.npmmirror.com/signal-exit@3.0.7:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/signal-exit/-/signal-exit-3.0.7.tgz}

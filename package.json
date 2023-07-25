@@ -13,7 +13,8 @@
     "@types/node": "^20.4.4",
     "@unocss/transformer-attributify-jsx": "0.53.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "shuimo-ui": "0.3.0-alpha.6"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
