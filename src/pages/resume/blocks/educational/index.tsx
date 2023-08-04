@@ -1,4 +1,4 @@
-import ResumePageHead from "@/page-components/ResumePageHead"
+import ResumePageHead from "@/assemblys/ResumePageHead"
 
 const Educational = () => {
   return <div>
