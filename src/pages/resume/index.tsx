@@ -6,7 +6,7 @@ import Oss from "@/pages/resume/blocks/oss"
 
 const Resume = () => {
   return <>
-    <div className="origin inset-x-0 ma mb-20 max-w-5xl p-8 backdrop-blur trans-ease" uno-b="b-1 solid gray-300 dark:b-gray-500">
+    <div class="origin inset-x-0 ma mb-20 max-w-5xl p-8 backdrop-blur trans-ease" uno-b="b-1 solid gray-300 dark:b-gray-500">
       <Introduce />
       <Educational />
       <Skills/>

@@ -2,6 +2,16 @@
 import { defineConfig, presetAttributify, presetIcons, presetUno } from 'unocss'
 import transformerAttributifyJsx from '@unocss/transformer-attributify-jsx'
 
+const getFluentMdl2 = () => {
+  let iconsList: string[] = [];
+  import("@iconify-json/fluent-mdl2/icons.json").then((res) => {
+    Object.keys(res.icons).map((item) => {
+      iconsList.push(`i-fluent-mdl2:${item}`)
+    })
+  })
+  return iconsList;
+}
+
 export default defineConfig({
   theme: {
     fontFamily: {
@@ -72,6 +82,7 @@ export default defineConfig({
       },
     }),
   ],
+  safelist: getFluentMdl2(),
   transformers: [
     transformerAttributifyJsx(),
   ],
