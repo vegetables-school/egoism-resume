@@ -2,27 +2,27 @@ const Introduce = () => {
   return <>
     <div uno-fbc>
       <div>
-        <h1>沈观聪</h1>
+        <h1>**************</h1>
         <div un-fic gap-2>
-          <div className="text-3.5" i-carbon-email></div>
-          alecshen0926@foxmail.com
+          <div class="text-3.5" i-carbon-email></div>
+          **************@foxmail.com
         </div>
         <div un-fic gap-2>
-          <div className="text-3.5" i-carbon-campsite></div>
-          hiyouus.com
+          <div class="text-3.5" i-carbon-campsite></div>
+          **************.com
         </div>
         <div un-fic gap-2>
-          <div className="text-3.5" i-ph:github-logo></div>
-          github.com/youuss
+          <div class="text-3.5" i-ph:github-logo></div>
+          github.com/**************
         </div>
       </div>
       <div>
         <h1 mb-24></h1>
         <div>
-          Born: 1996/09/26
+          Born: **************
         </div>
         <div>
-          Hangzhou, China
+          **************, China
         </div>
       </div>
     </div>
