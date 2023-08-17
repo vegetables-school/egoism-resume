@@ -1,4 +1,20 @@
-.m-input {
-  height: 26px !important;
-  line-height: 26px !important;
-}
+ #text-su-input {
+   .m-input {
+     height: 26px !important;
+     line-height: 26px !important;
+   }
+
+   .m-select {
+     width: 100px !important;
+
+
+     .m-option {
+       width: 80px !important;
+     }
+
+     .m-select-input,
+     .m-select-options {
+       width: auto !important;
+     }
+   }
+ }

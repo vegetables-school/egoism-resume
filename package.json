@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@vitejs/plugin-vue-jsx": "^3.0.1",
+    "@vueuse/core": "^10.3.0",
     "shuimo-ui": "0.3.0-alpha.7",
     "unocss": "^0.54.1",
     "vue": "^3.3.4"

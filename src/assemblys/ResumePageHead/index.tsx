@@ -1,7 +1,7 @@
-import TableListIcons from "@/components/TableListIcons";
 import TextSuInput from "@/components/TextSuInput";
-import { MPopover, MBorder, MInput } from "shuimo-ui";
-import { defineComponent, h, nextTick, ref } from "vue";
+import TableListIcons from "@/components/TableListIcons";
+import { MPopover, MBorder } from "shuimo-ui";
+import { defineComponent, h, ref } from "vue";
 
 const ResumePageHead = defineComponent({
   setup() {
@@ -25,7 +25,7 @@ const ResumePageHead = defineComponent({
               content: () => <MBorder> <TableListIcons onChooseIcon={chooseIcon} /></MBorder>,
             }}
           </MPopover>
-          <TextSuInput textDom="h3" />
+          <TextSuInput />
         </div>
         <hr />
       </>
