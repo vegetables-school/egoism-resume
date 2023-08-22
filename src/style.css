@@ -5,15 +5,16 @@
    }
 
    .m-select {
-     width: 100px !important;
+     width: 50px !important;
 
 
      .m-option {
-       width: 80px !important;
+       width: 30px !important;
      }
 
      .m-select-input,
      .m-select-options {
+       text-align: center;
        width: auto !important;
      }
    }

@@ -1,9 +1,9 @@
-import ResumePageHead from "@/assemblys/ResumePageHead"
+import DefineIconsText from "@/components/DefineIcons&Text"
 
 const Educational = () => {
   return (
     <div>
-      <ResumePageHead />
+      <DefineIconsText />
       <div un-fbc>
         <h4 m-0>****大学</h4>
         <div>20** - 20**</div>

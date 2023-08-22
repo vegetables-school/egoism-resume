@@ -1,15 +1,26 @@
 // 还未处理
 import { defineConfig, presetAttributify, presetIcons, presetUno } from 'unocss'
 import transformerAttributifyJsx from '@unocss/transformer-attributify-jsx'
+import fluentMd12Icons from '@iconify-json/fluent-mdl2/icons.json'  assert {type: 'json'}
 
+/**
+ * @description 获取 fluent-mdl2 的所有图标
+ */
 const getFluentMdl2 = () => {
   let iconsList: string[] = [];
-  import("@iconify-json/fluent-mdl2/icons.json").then((res) => {
-    Object.keys(res.icons).map((item) => {
-      iconsList.push(`i-fluent-mdl2:${item}`)
-    })
-  })
-  return iconsList;
+  Object.keys(fluentMd12Icons.icons).map((item) =>iconsList.push(`i-fluent-mdl2:${item}`))
+  return iconsList
+}
+
+/**
+ * @description 获取`text-`开头1-10的所有文字大小
+ */
+const getTextSize = () => {
+  let textSizeList: string[] = [];
+  for (let i = 1; i <= 10; i++) {
+    textSizeList.push(`text-${i}`)
+  }
+  return textSizeList;
 }
 
 export default defineConfig({
@@ -82,7 +93,8 @@ export default defineConfig({
       },
     }),
   ],
-  safelist: getFluentMdl2(),
+  // 动态属性处理
+  safelist: [...getFluentMdl2(),...getTextSize()],
   transformers: [
     transformerAttributifyJsx(),
   ],

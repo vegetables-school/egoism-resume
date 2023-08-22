@@ -9,25 +9,31 @@ import "./index.scss";
 const TableListIcons = defineComponent({
   emits: ["chooseIcon"],
   setup(_, { emit }) {
+    // icons 集合
     const icons = Object.keys(fluentMdl2Icons.icons);
-    const iconsTotal = fluentMdl2Info.total;
-    const currentIconsTotal = ref(iconsTotal);
+    const currentIconsList = ref(icons);
+
+    // icons 总数
+    const currentIconsTotal = ref(fluentMdl2Info.total);
     const currentPage = ref(1);
     const inputValue = ref("");
-    const currentIconsList = ref(icons);
-    const iconsTableList = ref(icons.slice(0, 35));
+    // 当前显示的 icons
+    const iconsCurrentList = ref(icons.slice(0, 35));
+
+    // 图标大小
+    const iconSize = ref(4);
 
     watch(currentPage, (count) => {
       const start = (count - 1) * 35;
       const end = count * 35;
-      iconsTableList.value = currentIconsList.value.slice(start, end);
+      iconsCurrentList.value = currentIconsList.value.slice(start, end);
     });
 
     watch(
       currentIconsList,
       () => {
         currentPage.value = 1;
-        iconsTableList.value = currentIconsList.value.slice(0, 35);
+        iconsCurrentList.value = currentIconsList.value.slice(0, 35);
         console.log(currentIconsList.value);
       },
       { deep: true },
@@ -49,24 +55,21 @@ const TableListIcons = defineComponent({
         class="table-list-icons"
       >
         <div class="flex pr">
-          {h(MInput, {
-            modelValue: inputValue.value,
-            "onUpdate:modelValue": (val: string) => (inputValue.value = val),
-          })}
+          <MInput modelValue={inputValue.value} onUpdate: modelValue={(val: string) => (inputValue.value = val)} />
           <MButton onClick={searchIcon}>搜索</MButton>
         </div>
-        {iconsTableList.value.map((iconName: string) => {
+
+        {iconsCurrentList.value.map((iconName: string) => {
           return h("i", {
             class: `i-fluent-mdl2:${iconName} w-8 h-8 m-1 table-icon-item`,
             onClick: () => chooseIcon(iconName),
           });
         })}
-        {h(MPagination, {
-          total: currentIconsTotal.value,
-          modelValue: currentPage.value,
-          "onUpdate:modelValue": (val: number) => (currentPage.value = val),
-          class: "pa bottom-0",
-        })}
+
+        <MPagination total={currentIconsTotal.value}
+          modelValue={currentPage.value}
+          onUpdate: modelValue={(val: number) => currentPage.value = val}
+          class="pa bottom-0" />
       </div>
     );
   },

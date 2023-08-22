@@ -3,8 +3,15 @@ import TableListIcons from "@/components/TableListIcons";
 import { MPopover, MBorder } from "shuimo-ui";
 import { defineComponent, h, ref } from "vue";
 
-const ResumePageHead = defineComponent({
-  setup() {
+const DefineIconsText = defineComponent({
+  name: "DefineIconsText",
+  props: {
+    iconSize: {
+      type: Number,
+      default: 4,
+    },
+  },
+  setup(props) {
     const iconName = ref("info");
 
     const chooseIcon = (icon: string) => iconName.value = icon;
@@ -14,13 +21,12 @@ const ResumePageHead = defineComponent({
         <div
           un-fic
           gap-2
-          mt-5
         >
           <MPopover>
             {{
               default: () =>
                 h("div", {
-                  class: `i-fluent-mdl2:${iconName.value} w-8 h-8`,
+                  class: `i-fluent-mdl2:${iconName.value} text-${props.iconSize}`,
                 }),
               content: () => <MBorder> <TableListIcons onChooseIcon={chooseIcon} /></MBorder>,
             }}
@@ -33,4 +39,4 @@ const ResumePageHead = defineComponent({
   },
 });
 
-export default ResumePageHead;
+export default DefineIconsText;
