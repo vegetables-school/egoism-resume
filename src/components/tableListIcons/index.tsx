@@ -7,7 +7,7 @@ import { defineComponent, h, ref, watch } from "vue";
 import "./index.scss";
 
 const TableListIcons = defineComponent({
-  emits: ["chooseIcon"],
+  emits: ["chooseIcon","changeIconSize"],
   setup(_, { emit }) {
     // icons 集合
     const icons = Object.keys(fluentMdl2Icons.icons);
@@ -19,9 +19,6 @@ const TableListIcons = defineComponent({
     const inputValue = ref("");
     // 当前显示的 icons
     const iconsCurrentList = ref(icons.slice(0, 35));
-
-    // 图标大小
-    const iconSize = ref(4);
 
     watch(currentPage, (count) => {
       const start = (count - 1) * 35;
@@ -46,7 +43,6 @@ const TableListIcons = defineComponent({
       currentIconsTotal.value = searchIcons.length;
       currentIconsList.value = searchIcons;
     };
-    const chooseIcon = (iconName: string) => emit("chooseIcon", iconName);
 
     return () => (
       <div
@@ -56,13 +52,15 @@ const TableListIcons = defineComponent({
       >
         <div class="flex pr">
           <MInput modelValue={inputValue.value} onUpdate: modelValue={(val: string) => (inputValue.value = val)} />
+          <div i-fluent-mdl2:font-decrease text-6 active:color-cyan-500 onClick={()=>emit("changeIconSize", -1)}/>
+          <div i-fluent-mdl2:font-increase text-6 active:color-orange-500 onClick={()=>emit("changeIconSize", 1)}/>
           <MButton onClick={searchIcon}>搜索</MButton>
         </div>
 
         {iconsCurrentList.value.map((iconName: string) => {
           return h("i", {
             class: `i-fluent-mdl2:${iconName} w-8 h-8 m-1 table-icon-item`,
-            onClick: () => chooseIcon(iconName),
+            onClick: () => emit("chooseIcon", iconName),
           });
         })}
 

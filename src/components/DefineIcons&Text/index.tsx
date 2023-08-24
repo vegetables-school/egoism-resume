@@ -13,8 +13,26 @@ const DefineIconsText = defineComponent({
   },
   setup(props) {
     const iconName = ref("info");
+    const iconSize = ref(props.iconSize);
 
     const chooseIcon = (icon: string) => iconName.value = icon;
+
+    const changeIconSize = (size: number) => {
+      if (iconSize.value > 1 && iconSize.value < 6) {
+        iconSize.value = iconSize.value + size;
+        return;
+      }
+      if (iconSize.value < 2 && size > 0) {
+        iconSize.value = iconSize.value + size;
+        return;
+      }
+      if (iconSize.value > 5 && size < 0) {
+        iconSize.value = iconSize.value + size;
+        return;
+      }
+
+
+    };
 
     return () => (
       <>
@@ -26,9 +44,9 @@ const DefineIconsText = defineComponent({
             {{
               default: () =>
                 h("div", {
-                  class: `i-fluent-mdl2:${iconName.value} text-${props.iconSize}`,
+                  class: `i-fluent-mdl2:${iconName.value} text-${iconSize.value}`,
                 }),
-              content: () => <MBorder> <TableListIcons onChooseIcon={chooseIcon} /></MBorder>,
+              content: () => <MBorder> <TableListIcons onChooseIcon={chooseIcon} onChangeIconSize={changeIconSize} /></MBorder>,
             }}
           </MPopover>
           <TextSuInput />
