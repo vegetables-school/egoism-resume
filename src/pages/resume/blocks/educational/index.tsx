@@ -4,6 +4,7 @@ const Educational = () => {
   return (
     <div>
       <DefineIconsText />
+      <hr />
       <div un-fbc>
         <h4 m-0>****大学</h4>
         <div>20** - 20**</div>

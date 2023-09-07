@@ -1,32 +1,23 @@
-const Introduce = () => {
-  return <>
-    <div uno-fbc>
-      <div>
-        <h1>**************</h1>
-        <div un-fic gap-2>
-          <div class="text-3.5" i-carbon-email></div>
-          **************@foxmail.com
-        </div>
-        <div un-fic gap-2>
-          <div class="text-3.5" i-carbon-campsite></div>
-          **************.com
-        </div>
-        <div un-fic gap-2>
-          <div class="text-3.5" i-ph:github-logo></div>
-          github.com/**************
-        </div>
-      </div>
-      <div>
-        <h1 mb-24></h1>
-        <div>
-          Born: **************
-        </div>
-        <div>
-          **************, China
-        </div>
-      </div>
-    </div>
-  </>
-}
+import { defineComponent, ref } from "vue";
+import IncreaseTag from "./components/IncreaseTagLabel";
+import BaseTagLabel from "./components/BaseTagLabel";
 
-export default Introduce
+const Introduce = defineComponent({
+  name: "Introduce",
+  setup() {
+    const newTagLabelList = ref<number[]>([]);
+    const newTagLabel = () => {
+      newTagLabelList.value.push(1);
+    };
+    return () => (
+      <div mt-10 mb-10 >
+        <div flex flex-wrap >
+          {newTagLabelList.value.map(() => <BaseTagLabel />)}
+          <IncreaseTag onNewTagLabel={newTagLabel} />
+        </div>
+      </div>
+    );
+  },
+});
+
+export default Introduce;

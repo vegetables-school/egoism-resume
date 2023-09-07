@@ -39,7 +39,7 @@ const DefineIconsText = defineComponent({
         <div
           un-fic
           gap-2
-        >
+        >  
           <MPopover>
             {{
               default: () =>
@@ -51,7 +51,6 @@ const DefineIconsText = defineComponent({
           </MPopover>
           <TextSuInput />
         </div>
-        <hr />
       </>
     );
   },
